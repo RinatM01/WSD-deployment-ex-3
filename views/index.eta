@@ -1,0 +1,17 @@
+<h1>Chat!</h1>
+<form method="POST">
+  <input type="text" name="sender" placeholder="Name"/>
+  <input type="text" name="message" placeholder="Message"/>
+  <input type="submit" value="Submit!" />
+</form>
+
+<table>
+  <tr>
+    <th>Sender: Message</th>
+  </tr>
+  <% it.msgs.forEach((obj) => { %>
+    <tr>
+        <td><%= obj.sender %>: <%= obj.message %></td>
+    </tr>
+  <% }); %>
+</table>
